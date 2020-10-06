@@ -7,11 +7,12 @@ import { FlatList } from 'react-native-gesture-handler';
 import { Header } from 'native-base';
 
 
+
 const HelEvent = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Header>
-                <Text style={styles.headerText}>Public Event</Text>
+                <Text style={styles.headerText}>Public Events</Text>
             </Header>
             <Text>Right Now in Helsinki:</Text>
             <ListHel navigation={navigation} />

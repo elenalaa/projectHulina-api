@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { getComments, useLoadEvent } from '../hooks/APIhooks';
 
 
+
 const ListHel = ({ navigation }) => {
   const [eventsHel, setEventsHel] = useState([])
 
@@ -25,14 +26,16 @@ const ListHel = ({ navigation }) => {
         const dateTime = data[i].event_dates.starting_day;
         const address = data[i].location.address;
         const city = data[i].location.address.locality;
+        const images = data[i].description.images[0].url;
+        
 
         const event = {
-          "name": name, "description": description, "datetime": dateTime, "address": address, "city": city
+          "name": name, "description": description, "datetime": dateTime, "address": address, "city": city, "images": images
         }
         helEvents.push(event)
       }
 
-      console.log(helEvents)
+      //console.log(helEvents)
       setEventsHel(helEvents);
     } catch (e) {
       console.error(e);
