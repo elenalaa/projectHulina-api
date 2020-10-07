@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+
 import axios from 'axios';
 
 const apiUrl = 'http://open-api.myhelsinki.fi/v1/events/';

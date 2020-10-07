@@ -4,6 +4,7 @@ import axios from 'axios';
 const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
 
 
+
 const useLoadEvent = () => {
     const [eventArray, setEventArray] = useState([]);
 
@@ -187,7 +188,7 @@ return commentArray;
           throw new Error(avatarImages.message);
         }
       } catch (e) {
-        throw new Error(e.message);
+      throw new Error(e.message);
       }
     };
 

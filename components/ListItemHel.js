@@ -3,21 +3,24 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, Text } from 'react-native';
 import {ListItem as CoolListItem, Thumbnail, Left, Body, Right, Button, Icon, Image } from 'native-base';
+import Moment from 'react-moment';
+import moment from "moment";
 
 const ListItem = ({navigation, singleEvent}) => {
   
-  const apiUrl= 'http://open-api.myhelsinki.fi/v1/events/?limit=5'
+  const apiUrl= 'http://open-api.myhelsinki.fi/v1/events/?limit=5';
 
+  
   return (
 
         <CoolListItem thumbnail>
            <Left>
-            <Thumbnail square source={{ uri: singleEvent.images} }/>
+            <Thumbnail square source={{ apiUrl: singleEvent.images} }/>
           </Left>
            <Body>
             <Text>{singleEvent.name}</Text>
             <Text>{singleEvent.city}</Text>
-            <Text>{singleEvent.datetime}</Text>
+            <Text>{moment(singleEvent.datetime).format('MMMM Do YYYY, h:mm:ss a')}</Text>
             
           </Body>
                   

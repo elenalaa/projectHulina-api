@@ -26,8 +26,10 @@ const ListHel = ({ navigation }) => {
         const dateTime = data[i].event_dates.starting_day;
         const address = data[i].location.address;
         const city = data[i].location.address.locality;
-        const images = data[i].description.images[0].url;
-        
+        const images = null;
+        if (data[i].description.images[0] != null) {
+          images = data[i].description.images[0].url;
+        }
 
         const event = {
           "name": name, "description": description, "datetime": dateTime, "address": address, "city": city, "images": images

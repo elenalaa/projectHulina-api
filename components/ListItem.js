@@ -24,7 +24,6 @@ const ListItem = ({navigation, singleEvent}) => {
             <Text>{singleEvent.title}</Text>
   <Text>{city}</Text>
             <Text>{dateTime}</Text>
-
           </Body>
           <Right>
             <Button transparent  onPress={() => {

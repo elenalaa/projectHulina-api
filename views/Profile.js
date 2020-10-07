@@ -15,6 +15,7 @@ import {
 } from 'native-base';
 import {getAvatar} from '../hooks/APIhooks';
 
+
 const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
 
 const Profile = ({navigation}) => {
